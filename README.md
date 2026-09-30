@@ -1,9 +1,5 @@
-# Inspex - Smart Inspection & Monitoring System (OIML R-76)
-### By Team CODIFY (158210)
-
-[![YouTube Presentation](https://img.shields.io/badge/YouTube-Video_Presentation-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/AnqudR6177E?si=J5--I8Wi2eW79oS6)
-[![Live Website Prototype](https://img.shields.io/badge/Website-Live_Prototype-0052FF?style=for-the-badge&logo=vercel&logoColor=white)](https://drishti360.onrender.com/)
-[![Download APK](https://img.shields.io/badge/APK-Download_Prototype-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://drive.google.com/file/d/1QRNk6M1IF1ViZFZCOvNc_yqt1804pk-p/view?usp=sharing)
+# Smart Inspection & Monitoring System (OIML R-76)
+### By Team CODIFY
 
 ---
 
@@ -21,47 +17,54 @@
 ---
 
 ## 📌 Project Overview
-Inspex is an advanced digital platform designed to transform the manual weighing-instrument evaluation process into a streamlined, automated, and AI-assisted digital workflow. Built for modern metrology, it enforces compliance with the **OIML R-76** standard while providing offline-first capabilities, intelligent anomaly detection, and tamper-proof report generation.
+Our solution is an advanced digital platform designed to transform the manual weighing-instrument evaluation process into a streamlined, automated, and AI-assisted digital workflow. Built for modern metrology, it enforces strict compliance with the **OIML R-76** standard while providing offline-first capabilities, intelligent anomaly detection, and tamper-proof report generation.
 
-## 🎯 Core Solutions
-* **Profiling & Parameterization:** Captures essential data of instruments (accuracy classes), automatically generates load steps, and rigorously tests the data.
-* **OIML R-76 Obs Matrix:** Digital data entry form that checks and notes laboratory environmental conditions.
+## 🎯 Core Solutions (Key Deliverables)
+* **Profiling & Parameterization:** Captures essential data of instruments (Maps accuracy classes), automatically generates load steps, and rigorously tests the data.
+* **OIML R-76 Obs Matrix:** A digital data entry form that meticulously checks and notes laboratory environmental conditions.
 * **Field Inspection & Evidence:** 
-  * Geo-fence mechanism to validate on-site evidence capture.
+  * **Geo-fence Mechanism:** Validates on-site evidence capture.
   * Geo-tagged inspection reports and live evidence capture.
-* **Evidence Anomaly Detection:** OCR-based comparison of captured field evidence with submitted documents to immediately detect mismatches, missing fields, and inconsistencies.
+* **Evidence Anomaly Detection:** Utilizes OCR-based comparison of captured field evidence against submitted documents to instantly detect mismatches, missing fields, and inconsistencies.
 
-## 💻 Technical Architecture
-### Application Layer
-* **Desktop Application:** Electron Framework (Windows / Linux / macOS)
-* **Web Application:** React / Next.js (Hosted on Vercel/Render)
-* **Core Engine:** Offline-first architecture with AES-256 Encrypted Local Storage (SQLite)
+## 💻 Technical Approach & Architecture
+
+### 1. Application Layer
+* **Desktop Application:** Built with the Electron Framework (Windows / Linux / macOS).
+* **Web Application:** Hosted securely (Vercel / Render).
+* **Core Engine:** Offline-first architecture with **AES-256 Encrypted Local Storage** (SQLite).
 * **RAG Assistant:** Powered by Ollama & ChromaDB for source-grounded R-76 knowledge guidance, contextual procedure support, and technical assistance.
 
-### Backend & Services
-* **REST API Layer:** Built on Node.js and Express.js, secured via JWT.
-* **OIML R-76 Rules Engine:** Dynamic rule configuration (JSON/YAML) for MPE calculations and compliance determination.
-* **Database & Storage:** MongoDB, Redis, and Amazon S3.
+### 2. Backend Services
+* **REST API Layer:** Built on Node.js and Express.js, secured via JWT to handle application requests, authentication, and data processing.
+* **OIML R-76 Rules Engine:** Dynamic rule configuration (JSON/YAML) for Maximum Permissible Error (MPE) calculations and compliance determination.
+* **Business Logic & Media:** Handles data validation, test sequence processing, and document/photo uploads.
+* **Data Storage:** MongoDB, Redis, and Amazon S3.
 
-### AI / ML Integrations
-* **Nameplate OCR & Document Validation:** Extracts instrument details and detects manual entry discrepancies.
-* **Voice Input (Hands-Free):** Web Speech API / Whisper integration to convert speech to structured fields, drastically improving lab workflow.
-* **Measurement Anomaly Detection:** Hugging Face and Scikit-learn models used to detect unusual patterns and alert technicians for review via XAI (Explainable AI).
+### 3. AI / ML Services
+* **Nameplate OCR & Document Validation:** Extracts instrument details and compares them with manual entries to detect discrepancies.
+* **Voice Input (Hands-Free):** Web Speech API / Whisper integration to convert speech to structured fields, dramatically improving lab workflow.
+* **Measurement Anomaly Detection:** Hugging Face and Scikit-learn models detect unusual patterns and alert technicians for review via XAI (Explainable AI).
 
-## 👥 Users & Workflows
-1. **Lab Technician:** Responsible for data entry, capturing photographs (instrument readings), and recording environmental conditions (Temperature, Humidity, Pressure).
+## 👥 Users & Inputs
+The system supports distinct role-based access for the metrology workflow:
+1. **Lab Technician:** Responsible for data entry (instrument details, environmental conditions like temp/humidity/pressure, test observations, and photographs).
 2. **Metrology Evaluator:** Reviews anomalies and approves the final test observations.
 3. **Administrator:** Handles comprehensive user and system management.
 
-## 📊 Output & Verification
-* **Generated Reports:** Available in PDF (Standard OIML R-76), DOCX (Editable), and JSON/XML (Machine Readable).
+## 📊 Output, Integration & Verification
+* **Generated Reports:** Exportable in PDF (Standard OIML R-76), DOCX (Editable), and JSON/XML (Machine Readable format).
+* **Dashboard & History:** Complete test report management, fast search & retrieval, and role-based access controls.
 * **Verify & Sharing:** 
   * Public verification links
-  * Tamper-proof reports utilizing Cryptographic QR codes
+  * Tamper-proof reports
+  * Cryptographic QR codes
   * Digital Signatures
 
 ## 🚀 Impact & Benefits
-* **Faster Reporting:** Automated calculations reduce manual processing time.
-* **Improved Accuracy:** Rule-based calculations completely eliminate manual human errors.
+* **Faster Reporting:** Automated calculations reduce manual processing time significantly.
+* **Improved Accuracy:** Rule-based calculations completely eliminate manual human calculation errors.
 * **Regulatory Transparency:** Makes test results, evaluations, and report history universally traceable.
 * **Scalable Testing:** Seamlessly supports multiple instruments, unlimited users, and future rule versions.
+* **Easy Data Access & Traceable Workflow:** Centralized storage maintains test history and audit records for better traceability.
+* **Future-Ready Infrastructure:** Creates a solid foundation for analytics, AI-assisted testing, and digital laboratories.
